@@ -148,7 +148,7 @@ class authController {
             axios.post('https://bpm.atameken-agro.com/api/', xmlCreateObject, config)
                 .then(async response => {
                     dataXml = parser.parse(response.data, options)
-                    dataXml = dataXml.sbapi.body.response.users.user
+                    dataXml = dataXml.sbapi.body.response.user.user
                     res.json(dataXml)
                 }).catch(e => console.log(e))
         } catch (e) {
